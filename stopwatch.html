@@ -8,19 +8,21 @@
     <link rel="stylesheet" href="stopwatch.css">
 </head>
 <body>
-    <div>
-        <h1>
+    <div id="StopWatch">
+        <h1 id="title">
             Stopwatch
         </h1>
-        <hr>
-        <h2 id="digits">
-            00:00:00
-        </h2>
-        <button onclick="Start();">Start</button>
+        <div id="digitBox">
+            <h2 id="digits">
+                00:00:00
+            </h2>
+        </div>
+        <button onclick="Start()">Start</button>
         &nbsp;
         <button onclick="Stop()">Stop</button>
         &nbsp;
         <button onclick="Restart()">Restart</button>
+        <br><br>
     </div>
 
     <script src="stopwatch.js"></script>

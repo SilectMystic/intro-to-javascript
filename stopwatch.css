@@ -2,9 +2,11 @@
 
 body {
     background-color: #0f0e17;
-    color: #a7a9be;
+    color: white;
     font-family: 'Nunito', sans-serif;
     text-align: center;
+    max-width: 1080px;
+    margin: auto;
 }
 
 button {
@@ -13,10 +15,39 @@ button {
     font-family: 'Nunito', sans-serif;
     border-radius: 8px;
     width: 70px;
-    height: 25px;
+    height: 33px;
+
 }
 
 button:hover {
     background-color: aqua;
     color: black;
+}
+
+#StopWatch {
+    width: 50%;
+    margin: auto;
+    margin-top: 15%;
+    background-color: #2e375e;
+    border-radius: 8px;
+}
+
+#title {
+    padding-top: 10px;
+}
+
+hr {
+    width: 95%;
+    border: black 1px solid;
+}
+
+#digitBox {
+    background-color: #15192b;
+    width: 90%;
+    margin: auto;
+    border-radius: 8px;
+}
+
+#digits {
+    padding: 9px;
 }
