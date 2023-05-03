@@ -3,9 +3,15 @@ let seconds = 0
 let minutes = 0
 let digits = document.getElementById("digits")
 let interval;
+let lapList = document.getElementById("myList")
+let startButton = document.getElementById("startButton")
+let lapButton = document.getElementById("lapButton")
+lapButton.disabled = true
+
 
 function Start () {
-    Stop()
+    lapButton.disabled = false
+    startButton.disabled = true
 
     interval = setInterval(function() {
         milliseconds = milliseconds + 10
@@ -27,6 +33,8 @@ function Start () {
 }
 
 function Stop () {
+    lapButton.disabled = true
+    startButton.disabled = false
     clearInterval(interval)
 }
 
@@ -36,4 +44,12 @@ function Restart () {
     seconds = 0
     minutes = 0
     digits.innerHTML = "00:00:00"
+    myList.innerHTML = ""
+}
+
+function laps () {
+    let newListItem = document.createElement("li")
+    newListItem.textContent = digits.innerHTML = String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0") + ":" + milliseconds/10
+ 
+    myList.appendChild(newListItem)
 }
